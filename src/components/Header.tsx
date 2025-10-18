@@ -14,8 +14,8 @@ export const Header = () => {
             <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
               <span className="text-2xl font-bold text-primary">C</span>
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold">CORPORATE PLC</span>
+          <div className="flex flex-col">
+              <span className="text-xl font-bold">COOPEC IKIRENGA</span>
               <span className="text-xs opacity-90">Excellence in Service</span>
             </div>
           </div>

@@ -13,19 +13,19 @@ const Index = () => {
     {
       id: 1,
       image: post1,
-      title: "Customer Service Week: CORPORATE Plc reaffirms commitment to excellence",
+      title: "Customer Service Week: COOPEC IKIRENGA reaffirms commitment to excellence",
       date: "October 17, 2025",
     },
     {
       id: 2,
       image: post2,
-      title: "CORPORATE Plc trains women entrepreneurs to embrace digital finance",
+      title: "COOPEC IKIRENGA trains women entrepreneurs to embrace digital finance",
       date: "June 23, 2025",
     },
     {
       id: 3,
       image: post3,
-      title: "CORPORATE Plc engages clients to strengthen long-term relationships",
+      title: "COOPEC IKIRENGA engages clients to strengthen long-term relationships",
       date: "June 16, 2025",
     },
   ];
@@ -39,7 +39,7 @@ const Index = () => {
       <section className="relative h-[500px] overflow-hidden">
         <img
           src={heroImage}
-          alt="Corporate Building"
+          alt="COOPEC IKIRENGA Building"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40 flex items-center">

@@ -14,7 +14,7 @@ export const Footer = () => {
                 <span className="text-2xl font-bold text-primary">C</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold">CORPORATE PLC</span>
+                <span className="text-xl font-bold">COOPEC IKIRENGA</span>
                 <span className="text-xs opacity-90">Excellence in Service</span>
               </div>
             </div>
@@ -76,7 +76,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
-          <p className="text-sm opacity-75">© 2025 Corporate PLC. All rights reserved.</p>
+          <p className="text-sm opacity-75">© 2025 COOPEC IKIRENGA. All rights reserved.</p>
         </div>
       </div>
     </footer>
