@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { SocialShare } from "@/components/SocialShare";
 import { PostCard } from "@/components/PostCard";
 import { Footer } from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import heroImage from "@/assets/hero-corporate.jpg";
 import post1 from "@/assets/post-1.jpg";
 import post2 from "@/assets/post-2.jpg";
@@ -80,6 +81,7 @@ const Index = () => {
       </section>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
