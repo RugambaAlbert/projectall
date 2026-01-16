@@ -1,33 +1,53 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 export const Footer = () => {
+  const [email, setEmail] = useState("");
+  const { toast } = useToast();
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email) {
+      toast({
+        title: "Successfully Subscribed!",
+        description: "Thank you for subscribing to our newsletter.",
+      });
+      setEmail("");
+    }
+  };
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and Contact */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+            <Link to="/" className="flex items-center space-x-2 mb-6 group">
+              <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                 <span className="text-2xl font-bold text-primary">C</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-bold">COOPEC IKIRENGA</span>
+                <span className="text-xl font-bold transition-colors duration-300 group-hover:text-secondary">COOPEC IKIRENGA</span>
                 <span className="text-xs opacity-90">Excellence in Service</span>
               </div>
-            </div>
+            </Link>
             <h3 className="text-xl font-semibold mb-4">Contact</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
                 <MapPin className="h-5 w-5 mt-1 flex-shrink-0" />
                 <p className="text-sm">B.P 4053 Kigali, Rwanda</p>
               </div>
-              <div className="flex items-center space-x-2">
+              <a 
+                href="tel:+250788319829" 
+                className="flex items-center space-x-2 hover:text-secondary transition-colors duration-300"
+              >
                 <Phone className="h-5 w-5 flex-shrink-0" />
                 <p className="text-sm">+250 788 319 829</p>
-              </div>
+              </a>
             </div>
           </div>
 
@@ -36,24 +56,44 @@ export const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Button variant="link" className="text-primary-foreground hover:text-secondary p-0 h-auto">
+                <Link 
+                  to="/news" 
+                  className="text-primary-foreground hover:text-secondary transition-colors duration-300 text-sm inline-block"
+                >
                   Tenders
-                </Button>
+                </Link>
               </li>
               <li>
-                <Button variant="link" className="text-primary-foreground hover:text-secondary p-0 h-auto">
+                <Link 
+                  to="/news" 
+                  className="text-primary-foreground hover:text-secondary transition-colors duration-300 text-sm inline-block"
+                >
                   Announcement
-                </Button>
+                </Link>
               </li>
               <li>
-                <Button variant="link" className="text-primary-foreground hover:text-secondary p-0 h-auto">
+                <Link 
+                  to="/products" 
+                  className="text-primary-foreground hover:text-secondary transition-colors duration-300 text-sm inline-block"
+                >
                   Products
-                </Button>
+                </Link>
               </li>
               <li>
-                <Button variant="link" className="text-primary-foreground hover:text-secondary p-0 h-auto">
+                <Link 
+                  to="/about" 
+                  className="text-primary-foreground hover:text-secondary transition-colors duration-300 text-sm inline-block"
+                >
                   About Us
-                </Button>
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/contact" 
+                  className="text-primary-foreground hover:text-secondary transition-colors duration-300 text-sm inline-block"
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -62,16 +102,22 @@ export const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Subscribe</h3>
             <p className="text-sm mb-4 opacity-90">Stay updated with our latest news and updates</p>
-            <div className="flex space-x-2">
+            <form onSubmit={handleSubscribe} className="flex space-x-2">
               <Input
                 type="email"
                 placeholder="Your Email Address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
               />
-              <Button className="bg-secondary text-primary hover:bg-secondary/90 px-6">
+              <Button 
+                type="submit"
+                className="bg-secondary text-primary hover:bg-secondary/90 hover:scale-105 px-6 transition-all duration-300"
+              >
                 Go
               </Button>
-            </div>
+            </form>
           </div>
         </div>
 

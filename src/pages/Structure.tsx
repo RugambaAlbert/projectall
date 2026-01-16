@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, Building, UserCircle, Shield } from "lucide-react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Structure = () => {
   return (
@@ -14,8 +15,8 @@ const Structure = () => {
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Organizational Structure</h1>
-            <p className="text-xl max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">Organizational Structure</h1>
+            <p className="text-xl max-w-3xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Our governance structure ensures transparency, accountability, and member participation in decision-making.
             </p>
           </div>
@@ -26,7 +27,7 @@ const Structure = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Governance Bodies</h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <Users className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-xl">General Assembly</CardTitle>
@@ -44,7 +45,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <Shield className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-xl">Board of Directors</CardTitle>
@@ -62,7 +63,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <UserCircle className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-xl">Management Team</CardTitle>
@@ -80,7 +81,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <Building className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-xl">Supervisory Committee</CardTitle>
@@ -106,7 +107,7 @@ const Structure = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Operational Departments</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Finance & Accounting</CardTitle>
                 </CardHeader>
@@ -117,7 +118,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Credit & Loans</CardTitle>
                 </CardHeader>
@@ -128,7 +129,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Savings & Deposits</CardTitle>
                 </CardHeader>
@@ -139,7 +140,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Member Services</CardTitle>
                 </CardHeader>
@@ -150,7 +151,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>Risk Management</CardTitle>
                 </CardHeader>
@@ -161,7 +162,7 @@ const Structure = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <CardTitle>IT & Digital Services</CardTitle>
                 </CardHeader>
@@ -177,6 +178,7 @@ const Structure = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
