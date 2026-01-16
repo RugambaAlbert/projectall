@@ -87,7 +87,16 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Smooth scroll with offset for fixed headers */
+  [id] {
+    scroll-margin-top: 100px;
   }
 }
