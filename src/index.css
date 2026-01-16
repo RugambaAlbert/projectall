@@ -9,74 +9,76 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 230 50% 15%;
+    --foreground: 150 30% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 230 50% 15%;
+    --card-foreground: 150 30% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 230 50% 15%;
+    --popover-foreground: 150 30% 15%;
 
-    --primary: 230 50% 25%;
+    --primary: 150 45% 20%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 95% 55%;
-    --secondary-foreground: 230 50% 25%;
+    --secondary: 42 85% 50%;
+    --secondary-foreground: 150 45% 15%;
 
-    --muted: 220 15% 95%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 150 10% 95%;
+    --muted-foreground: 150 15% 40%;
 
-    --accent: 40 95% 55%;
-    --accent-foreground: 230 50% 25%;
+    --accent: 42 85% 50%;
+    --accent-foreground: 150 45% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 90%;
-    --input: 220 15% 90%;
-    --ring: 230 50% 25%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 150 45% 20%;
 
     --radius: 0.5rem;
 
-    /* Custom tokens for corporate design */
-    --navy-deep: 230 50% 20%;
-    --navy-light: 230 40% 35%;
-    --gold: 40 95% 55%;
-    --gold-light: 40 90% 65%;
+    /* Custom tokens for professional banking design */
+    --forest-deep: 150 45% 18%;
+    --forest-medium: 150 40% 25%;
+    --forest-light: 150 35% 35%;
+    --gold: 42 85% 50%;
+    --gold-light: 42 80% 60%;
+    --gold-dark: 42 90% 40%;
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-soft: 0 2px 8px hsl(230 50% 25% / 0.08);
-    --shadow-hover: 0 8px 24px hsl(230 50% 25% / 0.12);
+    --shadow-soft: 0 2px 8px hsl(150 45% 20% / 0.08);
+    --shadow-hover: 0 8px 24px hsl(150 45% 20% / 0.12);
   }
 
   .dark {
-    --background: 230 50% 8%;
+    --background: 150 30% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 230 40% 12%;
+    --card: 150 25% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 230 40% 12%;
+    --popover: 150 25% 10%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 40 95% 55%;
-    --primary-foreground: 230 50% 15%;
+    --primary: 42 85% 50%;
+    --primary-foreground: 150 45% 10%;
 
-    --secondary: 230 40% 20%;
+    --secondary: 150 30% 18%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 230 40% 18%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 150 25% 15%;
+    --muted-foreground: 150 15% 60%;
 
-    --accent: 40 95% 55%;
-    --accent-foreground: 230 50% 15%;
+    --accent: 42 85% 50%;
+    --accent-foreground: 150 45% 10%;
 
     --destructive: 0 62.8% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 230 40% 20%;
-    --input: 230 40% 20%;
-    --ring: 40 95% 55%;
+    --border: 150 25% 18%;
+    --input: 150 25% 18%;
+    --ring: 42 85% 50%;
   }
 }
 
