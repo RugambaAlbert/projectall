@@ -2,6 +2,7 @@ import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PostCard } from "@/components/PostCard";
+import ScrollToTop from "@/components/ScrollToTop";
 import post1 from "@/assets/post-1.jpg";
 import post2 from "@/assets/post-2.jpg";
 import post3 from "@/assets/post-3.jpg";
@@ -55,8 +56,8 @@ const News = () => {
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">News & Updates</h1>
-            <p className="text-xl max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">News & Updates</h1>
+            <p className="text-xl max-w-3xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Stay informed about the latest news, events, and announcements from COOPEC IKIRENGA.
             </p>
           </div>
@@ -66,8 +67,15 @@ const News = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {allPosts.map((post) => (
-                <PostCard key={post.id} {...post} />
+              {allPosts.map((post, index) => (
+                <div 
+                  key={post.id}
+                  id={`post-${post.id}`}
+                  className="animate-fade-in-up opacity-0"
+                  style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'forwards' }}
+                >
+                  <PostCard {...post} />
+                </div>
               ))}
             </div>
           </div>
@@ -75,6 +83,7 @@ const News = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

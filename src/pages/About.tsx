@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, Users, Award, TrendingUp } from "lucide-react";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const About = () => {
   return (
@@ -14,8 +15,8 @@ const About = () => {
         {/* Hero Section */}
         <section className="bg-primary text-primary-foreground py-20">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">About COOPEC IKIRENGA</h1>
-            <p className="text-xl max-w-3xl">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">About COOPEC IKIRENGA</h1>
+            <p className="text-xl max-w-3xl animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               Leading financial cooperative dedicated to empowering communities through accessible and innovative financial services.
             </p>
           </div>
@@ -25,7 +26,7 @@ const About = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <Target className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-2xl">Our Mission</CardTitle>
@@ -38,7 +39,7 @@ const About = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2">
+              <Card className="border-2 hover:shadow-xl transition-all duration-300 hover:translate-y-[-4px]">
                 <CardHeader>
                   <TrendingUp className="w-12 h-12 text-primary mb-4" />
                   <CardTitle className="text-2xl">Our Vision</CardTitle>
@@ -59,7 +60,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <Users className="w-10 h-10 text-primary mb-3" />
                   <CardTitle>Member-Centric</CardTitle>
@@ -72,7 +73,7 @@ const About = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <Award className="w-10 h-10 text-primary mb-3" />
                   <CardTitle>Integrity</CardTitle>
@@ -85,7 +86,7 @@ const About = () => {
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardHeader>
                   <TrendingUp className="w-10 h-10 text-primary mb-3" />
                   <CardTitle>Innovation</CardTitle>
@@ -106,7 +107,7 @@ const About = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-center">Our History</h2>
-              <Card>
+              <Card className="hover:shadow-lg transition-all duration-300">
                 <CardContent className="pt-6">
                   <p className="text-muted-foreground mb-4">
                     COOPEC IKIRENGA was established with a vision to bridge the financial gap in our community 
@@ -128,6 +129,7 @@ const About = () => {
       </main>
 
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
