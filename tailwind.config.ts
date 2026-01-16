@@ -47,13 +47,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        navy: {
-          DEFAULT: "hsl(var(--navy-deep))",
-          light: "hsl(var(--navy-light))",
+        forest: {
+          DEFAULT: "hsl(var(--forest-deep))",
+          medium: "hsl(var(--forest-medium))",
+          light: "hsl(var(--forest-light))",
         },
         gold: {
           DEFAULT: "hsl(var(--gold))",
           light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
         },
       },
       borderRadius: {
