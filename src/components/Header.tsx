@@ -10,16 +10,16 @@ export const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-md">
+    <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-md transition-shadow duration-300 hover:shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
               <span className="text-2xl font-bold text-primary">C</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold">COOPEC IKIRENGA</span>
+              <span className="text-xl font-bold transition-colors duration-300 group-hover:text-secondary">COOPEC IKIRENGA</span>
               <span className="text-xs opacity-90">Excellence in Service</span>
             </div>
           </Link>
@@ -28,42 +28,42 @@ export const Header = () => {
           <nav className="hidden md:flex items-center space-x-1">
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/">Home</Link>
             </Button>
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/about") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/about") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/about">About us</Link>
             </Button>
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/structure") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/structure") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/structure">Structure</Link>
             </Button>
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/products") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/products") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/products">Products</Link>
             </Button>
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/news") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/news") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/news">News</Link>
             </Button>
             <Button
               variant="ghost"
-              className={`text-primary-foreground hover:bg-primary-foreground/10 ${isActive("/contact") ? "bg-primary-foreground/10" : ""}`}
+              className={`text-primary-foreground hover:bg-primary-foreground/10 transition-all duration-300 hover:translate-y-[-2px] ${isActive("/contact") ? "bg-primary-foreground/10" : ""}`}
               asChild
             >
               <Link to="/contact">Contact us</Link>
